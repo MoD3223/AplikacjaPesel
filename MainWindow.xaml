@@ -1,0 +1,84 @@
+﻿<Window x:Class="AplikacjaPesel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplikacjaPesel"
+        mc:Ignorable="d"
+        WindowStyle="None" Height="450" Width="800"
+        ResizeMode="NoResize"
+        Background="LightBlue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="Black" Grid.ColumnSpan="2"/>
+        <Button Grid.Column="1" Content="X" HorizontalAlignment="Right" Margin="00,00,0,0" Width="30" Background="Red" Foreground="White" Grid.RowSpan="2" VerticalAlignment="Top" Click="Button_Click"/>
+
+
+
+        <Button Content="Sprawdz swoj pesel!" Width="120" Height="30" Grid.Row="2" Click="Button_Click_1">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Padding="{TemplateBinding Padding}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                Background="{TemplateBinding Background}"
+                CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#c0e6fc"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <TextBox x:Name="txtBoxPESEL" Text="Wpisz swoj pesel!" Width="200" Height="30" Padding="5"
+         BorderBrush="LightGray" VerticalAlignment="Center" Grid.Row="2" Margin="0,-100,0,0" TextChanged="txtBoxPESEL_TextChanged">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <EventSetter Event="PreviewMouseLeftButtonDown" Handler="TextBox_PreviewMouseLeftButtonDown"/>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <Button Content="Przejdz do strony generowania PESELu" FontSize="20" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Width="800" Background="Beige"/>
+
+
+        <TextBlock x:Name="peselCheckTXTBlock" HorizontalAlignment="Left" Margin="310,120,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="310,250,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
+        <TextBlock HorizontalAlignment="Left" Margin="310,270,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
+        <TextBlock HorizontalAlignment="Left" Margin="310,290,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
+        <TextBlock HorizontalAlignment="Left" Margin="310,310,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
+
+        
+        
+        
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="770"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+    
+    
+</Window>
