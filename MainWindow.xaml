@@ -64,11 +64,11 @@
 
 
         <TextBlock x:Name="peselCheckTXTBlock" HorizontalAlignment="Left" Margin="310,120,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
-        
-        <TextBlock HorizontalAlignment="Left" Margin="310,250,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
-        <TextBlock HorizontalAlignment="Left" Margin="310,270,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
-        <TextBlock HorizontalAlignment="Left" Margin="310,290,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
-        <TextBlock HorizontalAlignment="Left" Margin="310,310,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"/>
+
+        <TextBlock x:Name="txtBlockRok" HorizontalAlignment="Left" Margin="280,250,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
+        <TextBlock x:Name="txtBlockGender" HorizontalAlignment="Left" Margin="280,270,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
+        <TextBlock x:Name="txtBlockSuma" HorizontalAlignment="Left" Margin="280,290,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
+        <TextBlock x:Name="txtBlockCalosc" HorizontalAlignment="Left" Margin="280,310,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
 
         
         
