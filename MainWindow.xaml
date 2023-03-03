@@ -5,21 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplikacjaPesel"
         mc:Ignorable="d"
-        WindowStyle="None" Height="450" Width="800"
+        WindowStyle="SingleBorderWindow" Height="450" Width="800"
         ResizeMode="NoResize"
         Background="LightBlue">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
 
-        <Grid Background="Black" Grid.ColumnSpan="2"/>
-        <Button Grid.Column="1" Content="X" HorizontalAlignment="Right" Margin="00,00,0,0" Width="30" Background="Red" Foreground="White" Grid.RowSpan="2" VerticalAlignment="Top" Click="Button_Click"/>
-
-
-
-        <Button Content="Sprawdz swoj pesel!" Width="120" Height="30" Grid.Row="2" Click="Button_Click_1">
+        <Button Content="Sprawdz swoj pesel!"  Click="Button_Click_1" Margin="328,192,329,192">
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border"
@@ -41,8 +32,8 @@
         </Button>
 
 
-        <TextBox x:Name="txtBoxPESEL" Text="Wpisz swoj pesel!" Width="200" Height="30" Padding="5"
-         BorderBrush="LightGray" VerticalAlignment="Center" Grid.Row="2" Margin="0,-100,0,0" TextChanged="txtBoxPESEL_TextChanged">
+        <TextBox x:Name="txtBoxPESEL" Text="Wpisz swoj pesel!" Height="30" Padding="5"
+         BorderBrush="LightGray" VerticalAlignment="Top"  Margin="288,142,289,0" TextChanged="txtBoxPESEL_TextChanged">
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="Template">
@@ -60,25 +51,13 @@
             </TextBox.Style>
         </TextBox>
 
-        <Button Content="Przejdz do strony generowania PESELu" FontSize="20" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Width="800" Background="Beige"/>
 
+        <TextBlock x:Name="peselCheckTXTBlock" HorizontalAlignment="Left" Margin="310,120,0,0"  TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
 
-        <TextBlock x:Name="peselCheckTXTBlock" HorizontalAlignment="Left" Margin="310,120,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
-
-        <TextBlock x:Name="txtBlockRok" HorizontalAlignment="Left" Margin="280,250,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
-        <TextBlock x:Name="txtBlockGender" HorizontalAlignment="Left" Margin="280,270,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
-        <TextBlock x:Name="txtBlockSuma" HorizontalAlignment="Left" Margin="280,290,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
-        <TextBlock x:Name="txtBlockCalosc" HorizontalAlignment="Left" Margin="280,310,0,0" Grid.Row="1" TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
-
-        
-        
-        
-        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="770"/>
-            <ColumnDefinition Width="30"/>
-        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="txtBlockRok" HorizontalAlignment="Left" Margin="280,250,0,0"  TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green" Visibility="Hidden"/>
+        <TextBlock x:Name="txtBlockGender" HorizontalAlignment="Left" Margin="280,270,0,0"  TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
+        <TextBlock x:Name="txtBlockSuma" HorizontalAlignment="Left" Margin="280,290,0,0"  TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
+        <TextBlock x:Name="txtBlockCalosc" HorizontalAlignment="Left" Margin="280,310,0,0"  TextWrapping="NoWrap" Text="TextBlock" VerticalAlignment="Top" Foreground="Green"  Visibility="Hidden"/>
     </Grid>
-    
-    
+
 </Window>

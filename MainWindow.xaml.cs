@@ -64,11 +64,6 @@ namespace AplikacjaPesel
             txtBlockCalosc.Text = "Znaleziono bledy! Sprawdz swoj PESEL";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             String tekst;
@@ -124,10 +119,6 @@ namespace AplikacjaPesel
 
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
         private void TextBox_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
